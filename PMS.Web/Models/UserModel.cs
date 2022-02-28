@@ -3,6 +3,7 @@ using System;
 
 namespace PMS.Web.Models
 {
+    //Todo: Temp change to inherit from IdentityUser
     public class UserModel:IdentityUser
     {
         public string FirstName { get; set; }

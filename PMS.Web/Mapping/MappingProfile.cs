@@ -11,6 +11,9 @@ namespace PMS.Web.Mapping
             // Add as many of these lines as you need to map your objects
             CreateMap<Employee, EmployeeModel>();
             CreateMap<EmployeeModel, Employee>();
+
+            CreateMap<AppUser, UserModel>();
+            CreateMap<UserModel, AppUser>();
         }
     }
 }

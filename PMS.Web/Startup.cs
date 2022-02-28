@@ -8,6 +8,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Identity.Web;
 using Microsoft.OpenApi.Models;
 using PMS.Web.Data;
+using PMS.Web.Middlewares;
 using PMS.Web.Services;
 
 namespace PMS.Web
@@ -56,6 +57,9 @@ namespace PMS.Web
 
             app.UseAuthentication();
             app.UseAuthorization();
+
+            //Middleware to handle user dat avalidation
+            app.UseMiddleware<UserAuthMiddleware>();
 
             app.UseEndpoints(endpoints =>
             {
